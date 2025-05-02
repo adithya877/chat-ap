@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Clone</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="sidebar">
+            <div class="header">
+                <div class="user-profile">
+                    <img id="user-avatar" src="images/default-avatar.png" alt="Profile">
+                    <span id="username"></span>
+                </div>
+                <button id="logout-btn">Logout</button>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Search or start new chat">
+            </div>
+            <div class="chat-list" id="chat-list">
+                <!-- Chats will be loaded here -->
+            </div>
+        </div>
+        <div class="chat-area">
+            <div class="chat-header">
+                <div class="chat-info">
+                    <img id="chat-avatar" src="images/default-avatar.png" alt="Chat">
+                    <span id="chat-name">Select a chat</span>
+                </div>
+            </div>
+            <div class="messages" id="messages">
+                <!-- Messages will be loaded here -->
+            </div>
+            <div class="message-input">
+                <input type="file" id="file-input" accept="image/*,.pdf,.doc,.docx" style="display: none;">
+                <button id="attach-btn">📎</button>
+                <input type="text" id="message-input" placeholder="Type a message">
+                <button id="send-btn">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/chat.js"></script>
+</body>
+</html>
